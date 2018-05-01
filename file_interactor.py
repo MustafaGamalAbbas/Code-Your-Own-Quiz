@@ -6,6 +6,9 @@ import models
 class FileModel:
 
     def __init__(self):
+        """
+        initialize instance of FileModel object
+        """
         self._count = 0
         self._dataSet = pd.DataFrame()
         self.q = models.FillInBlanksQuestion()

@@ -3,6 +3,11 @@ import tkinter as tk
 
 class CustomButton(tk.Frame):
     def __init__(self, master, fnc):
+        """
+          initialize instance of CustomButton object
+         :param master: Frame
+         :param fnc:  Observable function
+        """
         super().__init__(master)
         self._text = tk.StringVar()
         self._button = tk.Button(master,
@@ -37,6 +42,11 @@ class CustomButton(tk.Frame):
 
 class QuestionForm(tk.Frame):
     def __init__(self, master, fnc):
+        """
+         initialize instance of QuestionForm object
+        :param master: Frame
+        :param fnc:  Observable function
+        """
         super().__init__(master)
         self._question_view = tk.Label(master, text="",
                                        font=("Helvetica", 16), padx=5, pady=25)
@@ -134,6 +144,11 @@ class QuestionForm(tk.Frame):
 
 class LevelSelectionForm(tk.Frame):
     def __init__(self, master, fnc):
+        """
+        initialize instance of LevelSelectionForm object
+        :param master: Frame
+        :param fnc:  Observable function
+        """
         super().__init__()
         self._title_view = tk.Label(master, text="Select difficulty of levels .",
                                     font=("Helvetica", 14), padx=5, pady=25)
@@ -178,6 +193,11 @@ class LevelSelectionForm(tk.Frame):
 
 class ResultForm(tk.Frame):
     def __init__(self, master, fnc):
+        """
+        initialize instance of ResultForm object
+        :param master: Frame
+        :param fnc: Observable function
+        """
         super().__init__()
         self._title_view = tk.Label(master,
                                     text="The Quiz Ended .",

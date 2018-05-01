@@ -7,15 +7,30 @@ import file_interactor as fi
 
 class ControllerModel:
     def __init__(self):
+        """
+         initialize instance object of ControllerModel
+        """
         self.number_of_wrong_attempts = 0
 
     def increment_wrong_attempts(self):
+        """
+         increase the value of number_of_wrong_attempts
+        :return: void
+        """
         self.number_of_wrong_attempts = self.number_of_wrong_attempts + 1
 
     def get_wrong_attempts(self):
+        """
+        getting number_of_wrong_attempts value
+        :return:
+        """
         return self.number_of_wrong_attempts
 
     def reset_wrong_answer(self):
+        """
+        reset the value of number_of_wrong_attempts
+        :return:
+        """
         self.number_of_wrong_attempts = 0
 
 
@@ -45,6 +60,10 @@ controller = ControllerModel()
 
 
 def newQuestion():
+    """
+     this function handle getting new question from file interactor
+    :return:
+    """
     global current_question
 
     if file_model.is_end_of_file():
@@ -61,6 +80,11 @@ def newQuestion():
 
 
 def when_answer_choosed(text):
+    """
+    callback function that handle logic when user choose answer
+    :param text: String
+    :return: void
+    """
     global current_question
     print(text)
     # if choose the correct answer
@@ -76,6 +100,11 @@ def when_answer_choosed(text):
 
 
 def when_level_selected(text):
+    """
+    callback function that handle logic when user choose level
+    :param text: String
+    :return: void
+    """
     global current_question
     file_model.open_file(text.lower())
     current_question = file_model.get_next_question()
@@ -86,6 +115,11 @@ def when_level_selected(text):
 
 
 def newQuiz(text):
+    """
+     handle new Quiz logic
+    :param text: String
+    :return: void
+    """
     print(text)
     selection_diff_form_root.deiconify()
     selection_form.clear()

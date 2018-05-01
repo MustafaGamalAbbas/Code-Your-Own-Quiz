@@ -1,5 +1,8 @@
 class Question:
     def __init__(self):
+        """
+         initialize instance of Question
+        """
         self.question = ""
 
     def set_question(self, question):
@@ -21,6 +24,9 @@ class Question:
 class FillInBlanksQuestion(Question):
 
     def __init__(self):
+        """
+        initialize instance of FillInBlanksQuestion
+        """
         super().__init__()
         self.answers = ()
         self.correct_answer = ""
